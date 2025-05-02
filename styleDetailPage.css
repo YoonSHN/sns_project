@@ -1,0 +1,104 @@
+/* detail.html */
+*{
+    padding : 0;
+    margin : 0;
+    font : 'sans-serif';
+    box-sizing : border-box;
+}
+body {
+    font-family: Arial, sans-serif;
+    padding: 40px;
+}
+
+header{
+    background-color : #fff;
+    padding : 30px 0;
+    text-align : center;
+    border-bottom : 3px solid crimson;
+}
+header h2{
+    font-size : 24px;
+    font-weight : 600;
+    color : #333;
+}
+.container {
+    display: flex;
+    gap: 40px;
+}
+
+.image-section {
+    flex: 1;
+}
+
+.image-section img {
+    width: 100%;
+    height: auto;
+    max-width: 500px;
+    border: 1px solid #ccc;
+}
+
+.info-section {
+    flex: 1;
+}
+
+.info-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+main{
+    background-color : orange;
+    max-width : 1200px;
+    padding : 30px;
+    border-radius : 8px;
+    margin : 40px auto;
+    box-shadow : 0 0 10px raba(0,0,0,0.1);
+    position : relative;
+}
+
+.info-table th,
+.info-table td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.info-table th {
+    background-color: #f5f5f5;
+    width: 120px;
+}
+
+.comment-section {
+    margin-top: 50px;
+    border-top: 2px solid #333;
+    padding-top: 20px;
+}
+.comment-tag{
+    display : flex;
+    justify-content : space-between;
+}
+
+.comment-section textarea {
+    width: 100%;
+    height: 80px;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.comment-section button {
+    padding: 10px 20px;
+    font-weight: bold;
+    background-color: crimson;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+    .comment-list {
+    margin-top: 20px;
+}
+
+.comment-item {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
