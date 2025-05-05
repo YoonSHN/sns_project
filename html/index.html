@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
+  <link rel="icon" href="../favicon.png" type="image/x-icon" />
+  <script defer src="../js/main.js"></script>
+</head>
+<body>
+  <header>
+    <h1>자바스크립트 게시판 실습</h1>
+  </header>
+  <main>
+    <!-- 모달 영역 -->
+    <div class="modal" id="postModal">
+      <div class="postModal-content">
+        <div class="modal-header">
+          <h2>새로운 게시글 등록</h2>
+          <button type="button" id="closeModalBtn">X</button>
+        </div>
+        <form id="postForm" class="postForm">
+          <div class="form-row">
+            <label for="title">제목 : </label>
+            <input id="title" name="title" type="text" placeholder="제목을 입력하세요" />
+          </div>
+          <div class="form-row">
+            <label for="content">내용 :</label>
+            <textarea name="content" placeholder="내용을 입력하세요."></textarea>
+          </div>
+          <div class="form-row">
+            <label for="name">이름 : </label>
+            <input name="name" type="text" placeholder="이름을 입력하세요." />
+          </div>
+          <button type="submit" class="submit-btn">등록</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- 정렬/등록 버튼 -->
+    <div class="button-group">
+      <div class="left-buttons">
+        <button onclick="sortBy('latest')">최신순</button>
+        <button onclick="sortBy('views')">조회수순</button>
+      </div>
+      <div class="right-button">
+        <button type="button" id="removeAllBtn">초기화</button>
+        <button type="button" id="registerModal">등록하기</button>
+      </div>
+    </div>
+
+    <!-- 게시판 테이블 -->
+    <table>
+      <thead>
+        <tr>
+          <th>번호</th>
+          <th>제목</th>
+          <th>내용</th>
+          <th>등록자</th>
+          <th>조회수</th>
+          <th>상세보기</th>
+        </tr>
+      </thead>
+      <tbody id="postTableBody"></tbody>
+    </table>
+  </main>
+</body>
+</html>
