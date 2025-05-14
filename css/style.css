@@ -144,7 +144,6 @@ tbody tr:hover{
     padding : 10px;
     margin-bottom : 12px;
     position : relative;
-    margin-right : 10px;
 }
 .postModal-content .postForm .form-row input{
     width : 100%;
