@@ -1,0 +1,44 @@
+name: CI for Static Website
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      # HTML, CSS, JS lint (선택)
+      # HTMLHint 예시
+      - name: Install Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Install htmlhint
+        run: npm install -g htmlhint
+
+      - name: Run HTML Lint
+        run: htmlhint "**/*.html"
+
+      # CSS Lint 예시 (원하면 추가)
+      # - name: Install stylelint
+      #   run: npm install -g stylelint
+
+      # - name: Run CSS Lint
+      #   run: stylelint "**/*.css"
+
+      # JS Lint 예시 (원하면 추가)
+      # - name: Install eslint
+      #   run: npm install -g eslint
+
+      # - name: Run JS Lint
+      #   run: eslint "**/*.js"
